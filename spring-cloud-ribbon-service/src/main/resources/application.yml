@@ -1,0 +1,48 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+  instance:
+    hostname: localhost
+
+server:
+  port: 8989
+
+spring:
+  application:
+    name: service-ribbon
+
+  zipkin:
+    base-url: http://localhost:9411
+
+
+
+
+logging:
+  level:
+    root: debug
+
+# ribbon应用配置信息, 详见 {@link PropertiesFactory}
+SERVICE-EUREKA:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+
+# Ribbon的其他配置信息, 见 {@link RibbonClientConfiguration#ribbonClientConfig()}  和 {@link DefaultClientConfigImpl}
+ribbon:
+  MaxAutoRetriesNextServer: 2
+
+
+# Feign客户端配置
+feign:
+  client:
+    default-to-properties: false
+    config:
+      SERVICE-EUREKA:
+        loggerLevel: FULL
+      default:
+        connectTimeout: 5000
+        requestInterceptors: com.bob.springcloud.ribbon.config.DefaultRequestInterceptor
+
+
+
+

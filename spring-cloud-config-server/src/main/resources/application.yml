@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JiangJibo/SpringcloudConfig/
+          searchPaths: respo
+          username:
+          password:
+      label: master
+
+  application:
+    name: config-server
+
+server:
+  port: 8888
+
+
+#Client的http请求地址和资源文件映射如下,
+# application.name：代表子应用的名称
+# profile：子应用的配置环境
+# label: git上的项目分支
+
+#/{application.name}/{profile}[/{label}]
+
+#/{application.name}-{profile}.yml
+
+#/{label}/{application.name}-{profile}.yml
+
+#/{application.name}-{profile}.properties
+
+#/{label}/{application.name}-{profile}.properties
