@@ -1,5 +1,6 @@
 package com.bob.springcloud.ribbon;
 
+import com.bob.springcloud.ribbon.config.DefaultFeignConfiguration;
 import com.bob.springcloud.ribbon.config.DefaultRibbonClientConfig;
 import com.netflix.client.DefaultLoadBalancerRetryHandler;
 import com.netflix.client.RetryHandler;
@@ -31,7 +32,7 @@ import org.springframework.web.client.RestTemplate;
  * @author wb-jjb318191
  */
 @EnableEurekaClient
-@EnableFeignClients
+@EnableFeignClients(defaultConfiguration = DefaultFeignConfiguration.class)
 @SpringBootApplication
 @RibbonClient(value = "SERVICE-EUREKA", configuration = DefaultRibbonClientConfig.class)
 public class SpringCloudRibbonServiceApplication {
