@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.bob.springcloud.ribbon.model.User;
-import com.bob.springcloud.ribbon.service.FeignServiceRequest;
+import com.bob.springcloud.ribbon.service.FeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +24,7 @@ public class FeignController {
     private String applicationName;
 
     @Autowired
-    private FeignServiceRequest serviceRequest;
+    private FeignService serviceRequest;
 
     @GetMapping("/hello")
     public String sayHello(String name) {
@@ -34,8 +34,7 @@ public class FeignController {
     @GetMapping("/user")
     public User getUser(String name) {
         Map<String, Object> params = new HashMap<>();
-        params.put("name", name);
-        return serviceRequest.getUser(params, "123");
+        return serviceRequest.getUser(123);
     }
 
     //@GetMapping("/zuul/{name}")

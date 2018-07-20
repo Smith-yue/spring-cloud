@@ -1,15 +1,12 @@
 package com.bob.springcloud.ribbon.service;
 
-import java.util.Map;
-
 import com.bob.springcloud.ribbon.model.User;
-import org.springframework.stereotype.Component;
 
 /**
  * @author wb-jjb318191
  * @create 2018-06-13 10:37
  */
-public class FeignServiceRequestFallbackProcessor implements FeignServiceRequest {
+public class FeignServiceFallbackProcessor implements FeignService {
 
     @Override
     public String sayHelloFromClientOne(String name) {
@@ -17,12 +14,12 @@ public class FeignServiceRequestFallbackProcessor implements FeignServiceRequest
     }
 
     @Override
-    public void createUser(User user) {
-
+    public Integer createUser(User user) {
+        return null;
     }
 
     @Override
-    public User getUser(Map<String, Object> params, String id) {
+    public User getUser(Integer id) {
         return null;
     }
 

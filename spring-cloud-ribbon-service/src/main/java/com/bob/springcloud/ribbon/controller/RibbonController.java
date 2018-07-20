@@ -1,5 +1,7 @@
 package com.bob.springcloud.ribbon.controller;
 
+import com.bob.springcloud.ribbon.model.User;
+import com.bob.springcloud.ribbon.service.FeignService;
 import com.bob.springcloud.ribbon.service.RibbonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,6 +14,7 @@ import org.springframework.cloud.netflix.ribbon.SpringClientFactory;
 import org.springframework.cloud.netflix.ribbon.eureka.EurekaRibbonClientConfiguration;
 import org.springframework.cloud.netflix.ribbon.eureka.RibbonEurekaAutoConfiguration;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,11 +27,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/ribbon")
 public class RibbonController {
 
+    @Value("${spring.application.name}")
+    private String applicationName;
+
     @Autowired
     private RibbonService ribbonService;
 
-    @Value("${spring.application.name}")
-    private String applicationName;
+    @Autowired
+    private FeignService feignService;
 
     /**
      * Ribbon为每一个{@link com.netflix.discovery.shared.Application} 创建一个{@link SpringClientFactory#getContext(String)},key 就是应用名称
@@ -53,6 +59,19 @@ public class RibbonController {
     @GetMapping("/hello")
     public String hello(@RequestParam String name) {
         return ribbonService.hiService(name);
+    }
+
+    @GetMapping("/{id}")
+    public User getUser(@PathVariable Integer id) {
+        return feignService.getUser(id);
+    }
+
+    @GetMapping("/user")
+    public Integer createUser() {
+        User user = new User();
+        user.setName("bob");
+        user.setAge(30);
+        return feignService.createUser(user);
     }
 
 }

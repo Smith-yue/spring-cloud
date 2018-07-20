@@ -41,7 +41,7 @@ feign:
         loggerLevel: FULL
       default:
         connectTimeout: 5000
-        requestInterceptors: com.bob.springcloud.ribbon.config.DefaultRequestInterceptor
+        requestInterceptors: com.bob.springcloud.ribbon.config.ContentTypeRequestInterceptorptor
 
 
 

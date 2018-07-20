@@ -1,7 +1,7 @@
 package com.bob.springcloud.ribbon.config;
 
-import com.bob.springcloud.ribbon.service.FeignServiceRequest;
-import com.bob.springcloud.ribbon.service.FeignServiceRequestFallbackProcessor;
+import com.bob.springcloud.ribbon.service.FeignService;
+import com.bob.springcloud.ribbon.service.FeignServiceFallbackProcessor;
 import feign.Feign;
 import feign.hystrix.HystrixFeign;
 import org.springframework.context.annotation.Bean;
@@ -28,8 +28,8 @@ public class DefaultFeignConfiguration {
      * @return
      */
     @Bean
-    public FeignServiceRequest feignServiceRequestFallback() {
-        return new FeignServiceRequestFallbackProcessor();
+    public FeignService feignServiceRequestFallback() {
+        return new FeignServiceFallbackProcessor();
     }
 
 }
