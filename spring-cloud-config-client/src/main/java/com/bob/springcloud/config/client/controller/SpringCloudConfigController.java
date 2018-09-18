@@ -3,6 +3,7 @@ package com.bob.springcloud.config.client.controller;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.config.client.ConfigClientProperties;
 import org.springframework.cloud.config.client.ConfigServicePropertySourceLocator;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -18,6 +19,7 @@ import org.springframework.web.client.RestTemplate;
  * @see ConfigServicePropertySourceLocator#getRemoteEnvironment(RestTemplate, ConfigClientProperties, String, String)
  */
 @RestController
+@RefreshScope
 public class SpringCloudConfigController {
 
     @Value("${foo}")
