@@ -6,6 +6,7 @@ import org.springframework.cloud.bootstrap.BootstrapConfiguration;
 import org.springframework.cloud.config.client.ConfigClientAutoConfiguration;
 import org.springframework.cloud.config.client.ConfigServicePropertySourceLocator;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.core.env.Environment;
 
 /**
