@@ -22,7 +22,6 @@ import org.springframework.core.env.Environment;
  * 默认初始化时通过 {@link ConfigServicePropertySourceLocator#locate(Environment)} 向Server发送请求
  * 请求发送到
  *
- * @author jjb
  * @RequestMapping("/{name}/{profiles}/{label:.*}") {@link EnvironmentController#labelled()} 中
  *
  * 容器数据刷新配置类: {@link RefreshAutoConfiguration}
