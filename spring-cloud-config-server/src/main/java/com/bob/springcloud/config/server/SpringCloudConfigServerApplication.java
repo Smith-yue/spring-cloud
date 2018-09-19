@@ -29,6 +29,7 @@ import org.springframework.core.env.Environment;
  * >> {@link ContextRefresher#addConfigFilesToEnvironment}
  * >> {@link SpringApplicationBuilder#run(String...)}
  * >> {@link SpringApplication#run(String...)}
+ * >> {@link SpringApplication#prepareContext}
  * >> {@link SpringApplication#applyInitializers(ConfigurableApplicationContext)}
  * >> {@link PropertySourceBootstrapConfiguration#initialize(ConfigurableApplicationContext)}
  * >> {@link ConfigServicePropertySourceLocator#locate(Environment)}
