@@ -2,6 +2,7 @@ package com.bob.springcloud.config.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.autoconfigure.RefreshAutoConfiguration;
 import org.springframework.cloud.config.client.ConfigServicePropertySourceLocator;
 import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.config.server.config.ConfigServerProperties;
@@ -15,6 +16,8 @@ import org.springframework.core.env.Environment;
  * 向Server发送请求
  *
  * @RequestMapping("/{name}/{profiles}/{label:.*}") {@link EnvironmentController#labelled(String, String, String)} 中,
+ *
+ * 容器数据刷新配置类: {@link RefreshAutoConfiguration}
  */
 @EnableConfigServer
 @SpringBootApplication
