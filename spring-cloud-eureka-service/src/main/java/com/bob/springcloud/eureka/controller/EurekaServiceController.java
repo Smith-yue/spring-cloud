@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author wb-jjb318191
- * @create 2018-06-12 9:26
+ * @author
+ * @create
  */
 @RestController
 public class EurekaServiceController {

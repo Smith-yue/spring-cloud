@@ -7,7 +7,7 @@ import feign.hystrix.HystrixFeign;
 import org.springframework.context.annotation.Bean;
 
 /**
- * @author wb-jjb318191
+ * @author
  * @create 2018-07-19 16:52
  */
 public class DefaultFeignConfiguration {

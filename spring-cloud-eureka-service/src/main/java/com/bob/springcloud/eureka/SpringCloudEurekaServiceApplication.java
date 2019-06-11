@@ -8,8 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * Eureka服务提供者
  *
- * @author wb-jjb318191
- * @create 2018-06-12 14:46
+ * @author
+ * @create
  */
 // 此注解的作用是引入 EurekaDiscoveryClientConfiguration 类
 //@EnableEurekaClient

@@ -1,7 +1,7 @@
 package com.bob.springcloud.ribbon.model;
 
 /**
- * @author wb-jjb318191
+ * @author
  * @create 2018-07-12 9:32
  */
 public class User {

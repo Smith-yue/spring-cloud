@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
  *
  * 配置信息的作用机制：{@link ConfigServicePropertySourceLocator#getRemoteEnvironment(RestTemplate, ConfigClientProperties, String, String)}
  *
- * @author wb-jjb318191
+ * @author
  * @create 2018-06-11 15:14
  * @see ConfigClientProperties
  * @see ConfigServicePropertySourceLocator#getRemoteEnvironment(RestTemplate, ConfigClientProperties, String, String)

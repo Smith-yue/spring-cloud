@@ -29,7 +29,7 @@ import org.springframework.web.client.RestTemplate;
  * 当然也可以通过{@link EnableFeignClients#defaultConfiguration()} 来指定默认配置,效果和 {@link RibbonClients#defaultConfiguration()}一致
  * 若 {@link EnableFeignClients#clients()}不为空,那么禁止{@link FeignClient} 扫描
  *
- * @author wb-jjb318191
+ * @author
  */
 @EnableEurekaClient
 @EnableFeignClients(defaultConfiguration = DefaultFeignConfiguration.class)

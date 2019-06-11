@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * @author wb-jjb318191
- * @create 2018-06-21 17:14
+ * @author
+ * @create
  */
 @Service
 public class SpringCloudEurekaService {

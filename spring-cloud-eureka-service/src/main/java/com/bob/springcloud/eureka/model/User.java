@@ -1,8 +1,8 @@
 package com.bob.springcloud.eureka.model;
 
 /**
- * @author wb-jjb318191
- * @create 2018-07-12 9:32
+ * @author
+ * @create
  */
 public class User {
 

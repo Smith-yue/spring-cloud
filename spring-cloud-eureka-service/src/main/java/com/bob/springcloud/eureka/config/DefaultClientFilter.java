@@ -10,8 +10,8 @@ import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.filter.ClientFilter;
 
 /**
- * @author wb-jjb318191
- * @create 2018-07-03 14:07
+ * @author 
+ * @create
  */
 public class DefaultClientFilter extends ClientFilter {
 

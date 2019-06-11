@@ -7,7 +7,7 @@ import org.springframework.retry.listener.RetryListenerSupport;
 /**
  * 重试监听器
  *
- * @author wb-jjb318191
+ * @author
  * @create 2018-07-18 14:09
  */
 public class DefaultRetryListener extends RetryListenerSupport {

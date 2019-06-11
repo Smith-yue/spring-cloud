@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * 负载均衡重试监听器创建工厂
  *
- * @author wb-jjb318191
+ * @author
  * @create 2018-07-18 14:11
  */
 @Component

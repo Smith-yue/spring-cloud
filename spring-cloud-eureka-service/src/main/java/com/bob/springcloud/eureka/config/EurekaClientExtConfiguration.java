@@ -15,8 +15,8 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Eureka拓展配置
  *
- * @author wb-jjb318191
- * @create 2018-07-03 13:45
+ * @author
+ * @create
  */
 @Configuration
 public class EurekaClientExtConfiguration {

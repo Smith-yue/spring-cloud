@@ -1,7 +1,7 @@
 package com.bob.springcloud.eureka.server.config;
 
 /**
- * @author wb-jjb318191
+ * @author
  * @create 2018-07-03 10:11
  */
 public class ConditionalOnMissingBeanTest {

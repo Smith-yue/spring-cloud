@@ -3,8 +3,8 @@ package com.bob.springcloud.eureka.config;
 import com.netflix.discovery.PreRegistrationHandler;
 
 /**
- * @author wb-jjb318191
- * @create 2018-07-03 14:50
+ * @author
+ * @create
  */
 public class DefailtPreRegistrationHandler implements PreRegistrationHandler {
 

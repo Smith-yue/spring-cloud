@@ -3,7 +3,7 @@ package com.bob.springcloud.ribbon.service;
 import com.bob.springcloud.ribbon.model.User;
 
 /**
- * @author wb-jjb318191
+ * @author
  * @create 2018-06-13 10:37
  */
 public class FeignServiceFallbackProcessor implements FeignService {

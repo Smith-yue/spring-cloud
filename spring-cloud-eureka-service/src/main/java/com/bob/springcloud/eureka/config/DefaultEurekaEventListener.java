@@ -6,8 +6,8 @@ import com.netflix.discovery.EurekaEventListener;
 import com.netflix.discovery.StatusChangeEvent;
 
 /**
- * @author wb-jjb318191
- * @create 2018-07-03 14:43
+ * @author
+ * @create
  */
 public class DefaultEurekaEventListener implements EurekaEventListener {
 
