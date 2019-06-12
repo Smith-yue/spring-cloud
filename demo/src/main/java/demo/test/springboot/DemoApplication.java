@@ -8,10 +8,11 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 
 @EnableEurekaClient
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "demo.test.springboot")
 @EnableFeignClients(basePackages = {"demo.test.springboot.client",
 		"demo.test.springboot.controller"})
 @EnableDiscoveryClient // 该注解会根据配置文件中的地址，将服务自身注册到服务注册中心
+
 public class DemoApplication {
 
 	public static void main(String[] args) {

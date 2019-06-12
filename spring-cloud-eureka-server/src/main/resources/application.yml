@@ -17,6 +17,8 @@ eureka:
       # defaultZone: http://<username>:<password>@${eureka.instance.hostname}:${server.port}/eureka/
   server:
     enableSelfPreservation: false
+    eviction-interval-timer-in-ms: 1000
+
 logging:
   level:
     root: debug

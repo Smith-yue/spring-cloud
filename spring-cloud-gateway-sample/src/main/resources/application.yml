@@ -7,7 +7,17 @@ spring:
         - id: path_route
           uri: lb://service-eureka
           predicates:
-          - Path=/**
+          - Path=/eureka/**
+          filters:
+          - StripPrefix=1
+          - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+        - id: path_demo
+          uri: lb://demo
+          predicates:
+          - Path=/demo/**
+          filters:
+          - StripPrefix=1
+          - AddResponseHeader=X-Response-Default-Foo, Default-Bar
   application:
     name: gateway
 eureka:

@@ -1,9 +1,19 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka
+      # 指定Zone和Server地址的映射; 当有多个zone符合时, 默认选择第一个; 一个zone可以有多个应用,也就是多个Server
+      defaultZone: http://localhost:8761/eureka/, http://localhost:8762/eureka/
+      hangzhou: http://192.168.220.122:8761/eureka/
+      eu-east-1: http://192.168.223.112:8761/eureka/
+    # 指定给当前Client属于哪个Region
+    region: china
+    # 指定当前应用有哪些可用的Zone
+    availability-zones:
+      china: defaultZone,hangzhou
+      eu: eu-east-1,eu-west-1
+
   instance:
-    hostname: localhost
+    prefer-ip-address: true
 
 server:
   port: 8989
