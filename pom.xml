@@ -15,6 +15,8 @@
         <module>spring-cloud-ribbon-service</module>
         <module>spring-cloud-eureka-service</module>
         <module>spring-cloud-zipkin-server</module>
+        <module>spring-cloud-gateway-sample</module>
+        <module>demo</module>
     </modules>
 
 
