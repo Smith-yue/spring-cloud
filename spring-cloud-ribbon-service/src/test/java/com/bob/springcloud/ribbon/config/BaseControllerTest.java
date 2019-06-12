@@ -1,3 +1,4 @@
+/*
 package com.bob.springcloud.ribbon.config;
 
 import com.google.gson.Gson;
@@ -22,11 +23,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.context.WebApplicationContext;
 
+*/
 /**
  * @author JiangJibo
  * @version $Id$
  * @since 2016年12月8日 下午4:45:26
- */
+ *//*
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -50,134 +53,160 @@ public abstract class BaseControllerTest {
         init();
     }
 
-    /**
+    */
+/**
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     public String getRequest(String urlTemplate, Object... urlVariables) {
         return doRequest(RequestMethod.GET, null, false, null, urlTemplate, urlVariables);
     }
 
-    /**
+    */
+/**
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     public String getAsyncRequest(String urlTemplate, Object... urlVariables) {
         return doRequest(RequestMethod.GET, null, true, null, urlTemplate, urlVariables);
     }
 
-    /**
+    */
+/**
      * @param contentType
      * @param content
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     public String postRequest(MediaType contentType, String content, String urlTemplate, Object... urlVariables) {
         return doRequest(RequestMethod.POST, contentType, false, content, urlTemplate, urlVariables);
     }
 
-    /**
+    */
+/**
      * @param contentType
      * @param content
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     public String postAsyncRequest(MediaType contentType, String content, String urlTemplate, Object... urlVariables) {
         return doRequest(RequestMethod.POST, contentType, true, content, urlTemplate, urlVariables);
     }
 
-    /**
+    */
+/**
      * @param content
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     public String postRequest(String content, String urlTemplate, Object... urlVariables) {
         return doRequest(RequestMethod.POST, MediaType.APPLICATION_JSON, false, content, urlTemplate, urlVariables);
     }
 
-    /**
+    */
+/**
      * @param content
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     public String postAsyncRequest(String content, String urlTemplate, Object... urlVariables) {
         return doRequest(RequestMethod.POST, MediaType.APPLICATION_JSON, true, content, urlTemplate, urlVariables);
     }
 
-    /**
+    */
+/**
      * @param contentType
      * @param content
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     public String putRequest(MediaType contentType, String content, String urlTemplate, Object... urlVariables) {
         return doRequest(RequestMethod.PUT, contentType, false, content, urlTemplate, urlVariables);
     }
 
-    /**
+    */
+/**
      * @param contentType
      * @param content
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     public String putAsyncRequest(MediaType contentType, String content, String urlTemplate, Object... urlVariables) {
         return doRequest(RequestMethod.PUT, contentType, true, content, urlTemplate, urlVariables);
     }
 
-    /**
+    */
+/**
      * @param content
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     public String putRequest(String content, String urlTemplate, Object... urlVariables) {
         return doRequest(RequestMethod.PUT, MediaType.APPLICATION_JSON, false, content, urlTemplate, urlVariables);
     }
 
-    /**
+    */
+/**
      * @param content
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     public String putAsyncRequest(String content, String urlTemplate, Object... urlVariables) {
         return doRequest(RequestMethod.PUT, MediaType.APPLICATION_JSON, true, content, urlTemplate, urlVariables);
     }
 
-    /**
+    */
+/**
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     public String deleteRequest(String urlTemplate, Object... urlVariables) {
         return doRequest(RequestMethod.DELETE, null, false, null, urlTemplate, urlVariables);
     }
 
-    /**
+    */
+/**
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     public String deleteAsyncRequest(String urlTemplate, Object... urlVariables) {
         return doRequest(RequestMethod.DELETE, null, true, null, urlTemplate, urlVariables);
     }
 
-    /**
+    */
+/**
      * @param method
      * @param contentType
      * @param content
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     protected String doRequest(RequestMethod method, MediaType contentType, boolean async, String content, String urlTemplate, Object... urlVariables) {
 
         checkMappedController(urlTemplate);
@@ -210,7 +239,8 @@ public abstract class BaseControllerTest {
         }
     }
 
-    /**
+    */
+/**
      * @param e
      * @param method
      * @param contentType
@@ -218,17 +248,20 @@ public abstract class BaseControllerTest {
      * @param urlTemplate
      * @param urlVariables
      * @return
-     */
+     *//*
+
     protected String hanldeRequestException(Exception e, RequestMethod method, MediaType contentType, String content, String urlTemplate,
                                             Object... urlVariables) {
         return null;
     }
 
-    /**
+    */
+/**
      * 校验请求的路由是否匹配指定的Controller,主要根据Controller上的@RequestMapping()来校验
      *
      * @param urlTemplate
-     */
+     *//*
+
     private void checkMappedController(String urlTemplate) {
         Assert.notNull(mappedController, "必须指明当前ControllerTest映射到哪个Controller");
         Class<?> controllerClass = AopUtils.isAopProxy(mappedController) ? AopUtils.getTargetClass(mappedController) : mappedController.getClass();
@@ -249,11 +282,14 @@ public abstract class BaseControllerTest {
         }
     }
 
-    /**
+    */
+/**
      * 模板方法,由子类重写以决定是否在运行之前登录
-     */
+     *//*
+
     protected void init() {
 
     }
 
 }
+*/

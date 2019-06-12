@@ -6,7 +6,7 @@ eureka:
     hostname: localhost
 
 server:
-  port: 8989
+  port: 8990
 
 spring:
   application:
@@ -35,13 +35,13 @@ ribbon:
 # Feign客户端配置
 feign:
   client:
-    default-to-properties: false
+    default-to-properties: true
     config:
       SERVICE-EUREKA:
         loggerLevel: FULL
       default:
         connectTimeout: 5000
-        requestInterceptors: com.bob.springcloud.ribbon.config.ContentTypeRequestInterceptorptor
+        requestInterceptors: com.bob.springcloud.ribbon.config.ContentTypeRequestInterceptor
 
 
 

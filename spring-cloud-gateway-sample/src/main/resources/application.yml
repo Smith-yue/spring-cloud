@@ -1,0 +1,18 @@
+server:
+  port: 8683
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: path_route
+          uri: lb://service-eureka
+          predicates:
+          - Path=/**
+  application:
+    name: gateway
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka
+  instance:
+    hostname: localhost

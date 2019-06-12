@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.cloud.netflix.eureka.server.EurekaServerAutoConfiguration;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.Import;
 
 /**
@@ -15,6 +16,7 @@ import org.springframework.context.annotation.Import;
  * @create 2018-06-11 23:12
  * @see EurekaServerAutoConfiguration
  */
+@EnableFeignClients
 @EnableEurekaServer
 @SpringBootApplication
 //通过直接和间接的Import引入的Class是有顺序的, 最外层的@Import引入的Class位于解析到的Class集合的最后一位,也就是最晚解析

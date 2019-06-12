@@ -1,0 +1,36 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka
+  instance:
+    hostname: localhost
+
+server:
+  port: 8989
+
+feign:
+  client:
+    url : https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b6907d289e10d714a6e88b30761fae22
+
+logging:
+  level:
+    root: debug
+spring:
+  application:
+    name: demo
+  data:
+    mongodb:
+      host: 10.2.5.36
+      port: 27017
+      #username: jiuqi
+      #password: P@ssw0rd
+      database: XBB_R_8001
+      #启用身份校验 用户名
+      #username: test
+      #启用身份校验 密码
+      #password: test123
+      #启用身份校验 校验权限数据库 不设置校验时database项设置的数据库
+      #authenticationDatabase: NpBlobStorage
+      #数据库名称  此项不设置默认为NpBlobStorage
+      #database: NpBlobStorage
+
