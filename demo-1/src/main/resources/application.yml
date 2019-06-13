@@ -1,0 +1,40 @@
+server:
+  port: 8988
+
+foo: foo
+democonfigclient:
+  message: hello world
+eureka:
+  client:
+    serviceUrl:
+      # 指定Zone和Server地址的映射; 当有多个zone符合时, 默认选择第一个; 一个zone可以有多个应用,也就是多个Server
+      defaultZone: http://localhost:8761/eureka/, http://localhost:8762/eureka/
+      hangzhou: http://192.168.220.122:8761/eureka/
+      eu-east-1: http://192.168.223.112:8761/eureka/
+    # 指定给当前Client属于哪个Region
+    region: china
+    # 指定当前应用有哪些可用的Zone
+    availability-zones:
+      china: defaultZone,hangzhou
+      eu: eu-east-1,eu-west-1
+
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: demo
+  data:
+    mongodb:
+      host: 10.2.5.36
+      port: 27017
+      #username: jiuqi
+      #password: P@ssw0rd
+      database: XBB_R_8001
+      #启用身份校验 用户名
+      #username: test
+      #启用身份校验 密码
+      #password: test123
+      #启用身份校验 校验权限数据库 不设置校验时database项设置的数据库
+      #authenticationDatabase: NpBlobStorage
+      #数据库名称  此项不设置默认为NpBlobStorage
+      #database: NpBlobStorage
