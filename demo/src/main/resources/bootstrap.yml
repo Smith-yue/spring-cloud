@@ -1,0 +1,20 @@
+server:
+  port: 8989
+spring:
+  application:
+    #代表项目里文件名称的前缀：user
+    name: demo
+
+  cloud:
+    config:
+      #代表项目里文件名称的的中间段：-dev
+      profile: dev
+      # 代表git上配置所属分支名称
+      label: master
+      uri: http://localhost:8888/config
+feign:
+  client:
+    url : https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b6907d289e10d714a6e88b30761fae22
+management:
+  security:
+    enabled: false

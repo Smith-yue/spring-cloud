@@ -2,11 +2,13 @@ package demo.test.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.bootstrap.BootstrapConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 
+@BootstrapConfiguration
 @EnableEurekaClient
 @SpringBootApplication(scanBasePackages = "demo.test.springboot")
 @EnableFeignClients(basePackages = {"demo.test.springboot.client",

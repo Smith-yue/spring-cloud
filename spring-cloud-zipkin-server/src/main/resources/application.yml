@@ -2,5 +2,19 @@ server:
   port: 9411
 
 spring:
+  application:
+    name: zipkin
   main:
     allow-bean-definition-overriding: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+  instance:
+    hostname: localhost
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
